@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
 import Share from "./share/share";
 import Account from "./account/account";
-import menu from "./assets/menu.svg";
+import menu from "./menu.svg";
 import * as _ from "lodash";
 import "./nav.css";
 

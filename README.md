@@ -11,4 +11,4 @@ git clone https://github.com/mortonprod/react-account-component account
 git clone https://github.com/mortonprod/react-share-component share
 ```
 
-The import navigation to your app. You will need to have your favorite bundler deal with babel and imported css from the navigation. 
+Then import navigation to your app. You will need to have your favorite bundler deal with babel and imported css from the navigation component. 

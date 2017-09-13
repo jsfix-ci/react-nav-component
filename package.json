@@ -1,6 +1,6 @@
 {
   "name": "@mortonprod/react-nav-component",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A navigation bar containing auth account sign in and share buttons",
   "main": "dist/index.js",
   "scripts": {

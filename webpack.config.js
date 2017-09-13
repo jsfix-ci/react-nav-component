@@ -3,12 +3,11 @@ const webpack = require('webpack');
 const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 module.exports =  {
   entry: {
 		bundle: "./nav.js"
 	},
-	plugins: [new ExtractTextPlugin("index.css"),new OptimizeCssAssetsPlugin(), new UglifyJSPlugin() ],
+	plugins: [new ExtractTextPlugin("index.css"), new UglifyJSPlugin() ],
   module:{
   loaders: [
     {
@@ -16,7 +15,7 @@ module.exports =  {
       exclude: /(node_modules)/,
       loader: 'babel-loader'
     },
-		{ test: /\.css$/,loader:ExtractTextPlugin.extract("css-loader") },
+		{ test: /\.css$/,loader:ExtractTextPlugin.extract("css-loader?minimize") },
 		{
 		  test: /\.(jpe?g|png|ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,use: 'base64-inline-loader?limit=5000&name=[name].[ext]'
 		}

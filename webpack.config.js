@@ -17,12 +17,8 @@ module.exports =  {
       loader: 'babel-loader'
     },
 		{ test: /\.css$/,loader:ExtractTextPlugin.extract("css-loader") },
-    {   
-			test: /\.svg$/,loader: 'svg-inline-loader'
-		}, 
-    {
-		  test: /\.(jpe?g|png|gif)$/i,
-			loaders: ['file-loader?hash=sha512&digest=hex&name=[hash].[ext]','image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false']
+		{
+		  test: /\.(jpe?g|png|ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,use: 'base64-inline-loader?limit=5000&name=[name].[ext]'
 		}
   ]
   },

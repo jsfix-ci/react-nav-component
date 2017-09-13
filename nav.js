@@ -14,9 +14,9 @@ import "./nav.css";
     Once authentication complete redirect called with all components remounted. 
     Auth object will be updated with static member userProfile.
     WE CAN'T SEEM TO GET THIS FROM THE STATIC MEMBER. RACE CONDITION MAYBE???
-    @function
+    @class
 */
-export default class Nav extends Component {
+class Nav extends Component {
     constructor(props){
         super(props);
         if(window.innerWidth > props.thresholdX){
@@ -95,3 +95,5 @@ Nav.defaultProps ={
     ],
     thresholdX:800
 }
+
+export default Nav;

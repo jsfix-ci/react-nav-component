@@ -9,7 +9,7 @@
     flex-wrap: wrap;
     text-align: center;
     z-index: 10000;
-    background-color:black;
+    background-color: #42a5f5;
     border: 1px solid #979797;
 }
 
@@ -24,7 +24,7 @@
 
 .nav__links > a {
     color: white;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: bold;
 }
 
@@ -40,7 +40,7 @@
 .nav__header > h1 {
     margin: auto;
     color: white;
-    font-family: 'Lobster', cursive;
+    font-family: 'Raleway', sans-serif;
 }
 
 

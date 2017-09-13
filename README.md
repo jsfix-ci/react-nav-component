@@ -1,14 +1,30 @@
-# React-Nav-Component
+# react-nav-component
 
-This component does not work on it's own. See my [portfolio](https://alexandermorton.co.uk) of an example of it running.
+This is a header navigation component. It contains share and sign in button.
 
-It depends on share and account component which needs to be installed. The different branches are for different projects. 
+## Installation
+To install this component into your project run:
 
-# Build
+`npm install @mortonprod/react-nav-component`
 
-```
-git clone https://github.com/mortonprod/react-account-component account
-git clone https://github.com/mortonprod/react-share-component share
-```
+## Usage
 
-Then import navigation to your app. You will need to have your favorite bundler deal with babel and imported css from the navigation component. 
+Import the component like so: 
+
+`
+import Product from @mortonprod/react-nav-component
+`
+
+
+then import the css:
+
+
+`
+import @mortonprod/react-nav-component/dist/index.css
+` 
+
+Note you must pull the css independently of the component. 
+
+## Contributing
+
+You are free to contribute to this component if you wish.

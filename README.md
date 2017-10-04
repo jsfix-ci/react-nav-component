@@ -33,9 +33,11 @@ Check out the render.js file in src as an example of how to do this.
 
 
 We then import the css:
+
 `
 import @mortonprod/react-nav-component/dist/index.css
 ` 
+
 Note you must pull the css independently of the component so you can easily style the component differently.
 
 # Build Github
@@ -50,13 +52,13 @@ You will need to add your own config.js file to run this repository from github.
 I don't want to add my auth0 credentials to my github :-). Check out [auth0](https://auth0.com/) for more
 details.
 
-Once you have add this you can run the webpack-dev-server:
+Once you have added this you can run webpack-dev-server:
 
 ```
 npm run start
 ```
 
-and link to [localhost:8080/webpack-dev-server/](localhost:8080/webpack-dev-server/).
+and link to [localhost:8080/webpack-dev-server/](http://localhost:8080/webpack-dev-server/).
 
 
 The tests are run with
@@ -76,7 +78,7 @@ Documentation is create and displayed with jsdocs and node js:
 npm run docs
 ```
 
-then connect to the node server with [localhost:3001](https://localhost:3001)
+then connect to the node server with [localhost:3001](https://localhost:3001) to see all the documentation.
 
 ## Contributing
 

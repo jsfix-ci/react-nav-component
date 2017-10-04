@@ -4,7 +4,9 @@
 [![npm version](https://badge.fury.io/js/%40mortonprod%2Freact-nav-component.svg)](https://badge.fury.io/js/%40mortonprod%2Freact-nav-component)
 [![Dependecies](https://david-dm.org/mortonprod/react-nav-component.svg)](https://david-dm.org/mortonprod/react-nav-component.svg)
 
-This opinionated react router component. As arguments it takes. 
+This opinionated react router component. It adds share buttons, signin and route creation. 
+
+As arguments it takes. 
 
 * Routes
     * name
@@ -13,27 +15,50 @@ This opinionated react router component. As arguments it takes.
 * Authentication
 
 The authentication is passed as a separate argument. This is done so we can access this information from
-our component
+our components. 
 
-# Build 
+# Build Github
 
-You will need to add your own config.js file to build this repository from github. 
-I don't want to add my auth0 credentials to my github :-) 
-
-
-
-To build the component directly rather than getting from npm we will need to install all our dependencies.
-
+Get all the dependencies
+ 
 ```
-npm install
+npm run install
 ```
 
+You will need to add your own config.js file to run this repository from github. 
+I don't want to add my auth0 credentials to my github :-). Check out [auth0](https://auth0.com/) for more
+details.
+
+Once you have add this you can run the webpack-dev-server:
+
+```
+npm run start
+```
+
+and link to [localhost:8080/webpack-dev-server/](localhost:8080/webpack-dev-server/).
 
 
+The tests are run with
 
-This is a header navigation component. It contains share and sign in button.
+```
+npm run test
+```
+or to run with watchman
 
-## Installation
+```
+npm run test:watch
+```
+
+Documentation is create and displayed with jsdocs and node js:
+
+```
+npm run docs
+```
+
+then connect to the node server with [localhost:3001](https://localhost:3001)
+
+
+## NPM
 To install this component into your project run:
 
 `npm install @mortonprod/react-nav-component`
@@ -43,18 +68,18 @@ To install this component into your project run:
 Import the component like so: 
 
 `
-import Product from @mortonprod/react-nav-component
+import {CreateRouter,Auth} from @mortonprod/react-nav-component
 `
 
+You will initialise Auth and then pass this to the router and any routes you like. 
+Check out the render.js file in src as an example of how to do this.
 
-then import the css:
 
-
+We then import the css:
 `
 import @mortonprod/react-nav-component/dist/index.css
 ` 
-
-Note you must pull the css independently of the component. 
+Note you must pull the css independently of the component so you can easily style the component differently. 
 
 ## Contributing
 

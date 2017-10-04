@@ -5,7 +5,8 @@ import isIE from "./isIE";
 import Nav from "./nav";
 
 /**
-If url matches test then we must be logged in so store token and get user information.
+ *   If url matches test then we must be logged in so store token and get user information.
+ *  This will be tested on every route change.
 */
 function handleAuthentication(location,Auth) {
     if (/access_token|id_token|error/.test(location.hash)) {
@@ -14,7 +15,7 @@ function handleAuthentication(location,Auth) {
 }
   
 /**
-     We need to reset the scroll position manually on each route enter.
+    We need to reset the scroll position manually on each route enter.
     This should be called when each main route mounts.
     History scroll restoration tells browser to set scroll position when using back and forward button.
     ------------
@@ -27,13 +28,16 @@ function handlePageChange(history){
         history.scrollRestoration = "auto";
     }
 }
-
+/**
+ * This function will take a route array and create a list of exact path routes.
+ * The route will either use a function or component depending if we need to pass argument to it.
+ */
 function createRouteArray(routes) {
-    const output = routes.map((el)=>{
+    const output = routes.map((el, i)=>{
         if(el.element){
-            return <Route exact path={el.location} component={el.element} />
+            return <Route key={i} exact path={el.location} component={el.element} />
         }else if(el.function){
-            return <Route exact path={el.location} render={el.function} />
+            return <Route key={i} exact path={el.location} render={el.function} />
         }else{
             throw(Error("Didn't find function or element to render"))
         }
@@ -42,9 +46,10 @@ function createRouteArray(routes) {
 }
 
 /**
- * This will take in 
+ * This component will setup the routes and navigation. 
+ * It will also add share buttons and auth0. 
  */
-export class CreateRouter extends Component {
+class CreateRouter extends Component {
     constructor(props){
         super(props);
         let navRoutes = _.cloneDeep(props.routes);
@@ -84,6 +89,4 @@ export class CreateRouter extends Component {
     }
 }
 
-
-
-
+export {CreateRouter};

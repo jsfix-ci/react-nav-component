@@ -13,6 +13,11 @@ our component
 
 # Build 
 
+You will need to add your own config.js file to build this repository from github. 
+I don't want to add my auth0 credentials to my github :-) 
+
+
+
 To build the component directly rather than getting from npm we will need to install all our dependencies.
 
 ```

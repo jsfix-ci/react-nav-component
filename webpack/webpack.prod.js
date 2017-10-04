@@ -6,8 +6,8 @@ const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
   entry: {
-    index: './index.js',
-    'index.min': './index.js'
+    index: './src/index.js',
+    'index.min': './src/index.js'
   },
   module: {
     loaders: [

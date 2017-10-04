@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
 import {Auth,CreateRouter} from "./index";
+import config from "./config";
 import * as ReactDOM from "react-dom";
 
+const auth = new Auth(config);
+
 const props = {
-    Auth:Auth,
+    Auth:auth,
     routes:[
         {
             name: "route1",

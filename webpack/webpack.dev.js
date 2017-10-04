@@ -4,7 +4,7 @@ var webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = merge(common, {
 entry: {
-   index: './render.js'
+   index: './src/render.js'
  },
  devtool: 'inline-source-map',
  devServer: {

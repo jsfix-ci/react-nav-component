@@ -17,6 +17,27 @@ As arguments it takes.
 The authentication is passed as a separate argument. This is done so we can access this information from
 our components. 
 
+## NPM
+To install this component into your project run:
+
+`npm install @mortonprod/react-nav-component`
+
+Import the component like so: 
+
+`
+import {CreateRouter,Auth} from @mortonprod/react-nav-component
+`
+
+You will initialise Auth and then pass this to the router and any routes you like. 
+Check out the render.js file in src as an example of how to do this.
+
+
+We then import the css:
+`
+import @mortonprod/react-nav-component/dist/index.css
+` 
+Note you must pull the css independently of the component so you can easily style the component differently.
+
 # Build Github
 
 Get all the dependencies
@@ -56,30 +77,6 @@ npm run docs
 ```
 
 then connect to the node server with [localhost:3001](https://localhost:3001)
-
-
-## NPM
-To install this component into your project run:
-
-`npm install @mortonprod/react-nav-component`
-
-## Usage
-
-Import the component like so: 
-
-`
-import {CreateRouter,Auth} from @mortonprod/react-nav-component
-`
-
-You will initialise Auth and then pass this to the router and any routes you like. 
-Check out the render.js file in src as an example of how to do this.
-
-
-We then import the css:
-`
-import @mortonprod/react-nav-component/dist/index.css
-` 
-Note you must pull the css independently of the component so you can easily style the component differently. 
 
 ## Contributing
 

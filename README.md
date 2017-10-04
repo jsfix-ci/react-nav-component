@@ -1,4 +1,8 @@
 # Introduction
+[![Build Status](https://travis-ci.org/mortonprod/react-nav-component.svg?branch=master)](https://travis-ci.org/mortonprod/react-nav-component)
+[![Coverage Status](https://coveralls.io/repos/github/mortonprod/react-nav-component/badge.svg?branch=master)](https://coveralls.io/github/mortonprod/react-nav-component?branch=master)
+[![npm version](https://badge.fury.io/js/%40mortonprod%2Freact-nav-component.svg)](https://badge.fury.io/js/%40mortonprod%2Freact-nav-component)
+[![Dependecies](https://david-dm.org/mortonprod/react-nav-component.svg)](https://david-dm.org/mortonprod/react-nav-component.svg)
 
 This opinionated react router component. As arguments it takes. 
 

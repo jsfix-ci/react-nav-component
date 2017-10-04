@@ -6,7 +6,7 @@ import {
 import TestUtils from 'react-dom/test-utils';
 import { shallow,mount } from 'enzyme';
 import sinon from 'sinon';
-import Account from './account';
+import Account from '../src/account/account';
 
 describe("<Account/>", ()=>{
     it("renders without crashing", ()=>{

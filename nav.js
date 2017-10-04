@@ -16,7 +16,7 @@ import "./nav.css";
     WE CAN'T SEEM TO GET THIS FROM THE STATIC MEMBER. RACE CONDITION MAYBE???
     @class
 */
-class Nav extends Component {
+export default class Nav extends Component {
     constructor(props){
         super(props);
         if(window.innerWidth > props.thresholdX){
@@ -58,9 +58,9 @@ class Nav extends Component {
         Must use exact in navlink otherwise "/" (welcome) is active link for all routes.
     */
     render(){
-	    let links = this.props.links.map((el,i)=>{
+        let links = this.props.links.map((el,i)=>{
 	        return (
-	            <NavLink exact activeStyle={{color: 'lightblue'}}  key={i} to={el.location}> {el.name} </NavLink>
+                <NavLink exact activeStyle={{color: 'lightblue'}}  key={i} to={el.location}> {el.name} </NavLink>
 	        )
 	    })
 	    if(this.state.isShow){ 
@@ -73,16 +73,16 @@ class Nav extends Component {
 		                {links}
 		            </div>
 		            <div className={"nav__share"}>
-		                <Share/>
+		                <Share />
 		            </div>
 		            <div className={"nav__account"}>
-		                <Account profile={this.state.profile} auth={this.props.Auth}/>
+		                <Account profile={this.state.profile} auth={this.props.Auth} />
 		            </div>
 		        </nav>
 		    )
 	    }else{
 	        return (
-	            <img onClick={this.clickNav.bind(this)} src={menu} className={"nav__button"} alt="Menu Button"/>
+	            <img onClick={this.clickNav.bind(this)} src={menu} className={"nav__button"} alt='Menu Button'/>
 	        )
 	    }
     }
@@ -93,7 +93,8 @@ Nav.defaultProps ={
     links:[
         {name:"about",location:"/about"}
     ],
-    thresholdX:800
+    thresholdX:800,
+    Auth:{
+        getProfile: ()=>{}
+    }
 }
-
-export default Nav;

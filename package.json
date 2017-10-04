@@ -4,8 +4,10 @@
   "description": "A navigation bar containing auth account sign in and share buttons",
   "main": "dist/index.js",
   "scripts": {
-    "test": "npm run tests",
-    "build": "./node_modules/.bin/webpack --progress"
+    "prepublish": "npm run build",
+    "build": "./node_modules/.bin/webpack --config ./webpack/webpack.prod.js --progress",
+    "start": "webpack-dev-server --open --config ./webpack/webpack.dev.js",
+    "test": "npm run build && jest ./__tests__/*"
   },
   "repository": {
     "type": "git",
@@ -21,8 +23,11 @@
   },
   "homepage": "https://github.com/mortonprod/react-nav-component#readme",
   "dependencies": {
-    "react": "^15.6.1",
-    "react-router-dom": "^4.1.2"
+    "auth0-js": "^8.10.1",
+    "history": "^4.7.2",
+    "react": "^16.0.0",
+    "react-router-dom": "^4.1.2",
+    "react-share": "^1.16.0"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
@@ -32,16 +37,30 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "base64-inline-loader": "^1.1.0",
+    "clean-webpack-plugin": "^0.1.17",
     "css-loader": "^0.28.4",
-    "extract-text-webpack-plugin": "^3.0.0",
+    "eslint": "^4.8.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-react": "^7.4.0",
+    "extract-text-webpack-plugin": "^3.0.1",
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.2",
+    "html-webpack-plugin": "^2.30.1",
     "ignore-loader": "^0.1.2",
     "image-webpack-loader": "^3.4.2",
-    "optimize-css-assets-webpack-plugin": "^3.1.1",
+    "optimize-css-assets-webpack-plugin": "^3.2.0",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^11.0.0",
+    "postcss-loader": "^2.0.6",
+    "react-dom": "^16.0.0",
     "style-loader": "^0.18.2",
+    "stylelint-config-sass-guidelines": "^3.1.0",
+    "stylelint-webpack-plugin": "^0.9.0",
     "svg-inline-loader": "^0.8.0",
     "uglifyjs-webpack-plugin": "^0.4.6",
-    "webpack": "^3.4.1"
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1",
+    "webpack-merge": "^4.1.0",
+    "webpack-strip-block": "^0.2.0"
   }
 }

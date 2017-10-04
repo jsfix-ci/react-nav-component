@@ -29,11 +29,11 @@ function handlePageChange(history){
 }
 
 function createRouteArray(routes) {
-    const output = routes.forEach((el)=>{
+    const output = routes.map((el)=>{
         if(el.element){
-            <Route exact path={el.location} component={el.element} />
+            return <Route exact path={el.location} component={el.element} />
         }else if(el.function){
-            <Route exact path={el.location} render={el.function} />
+            return <Route exact path={el.location} render={el.function} />
         }else{
             throw(Error("Didn't find function or element to render"))
         }
@@ -75,7 +75,7 @@ export class CreateRouter extends Component {
                 <div>
                     <Nav
                         Auth={this.props.Auth}
-                        links={this.state.routes}
+                        links={this.state.navRoutes}
                     />
                     <Route component={Content} />
                 </div>

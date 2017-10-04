@@ -1,6 +1,17 @@
 # Introduction
 
-#Build 
+This opinionated react router component. As arguments it takes. 
+
+* Routes
+    * name
+    * location
+    * function or element.
+* Authentication
+
+The authentication is passed as a separate argument. This is done so we can access this information from
+our component
+
+# Build 
 
 To build the component directly rather than getting from npm we will need to install all our dependencies.
 

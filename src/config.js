@@ -6,7 +6,7 @@ const config = {
     redirectUri: redirect,
     audience: 'https://mortonprod.eu.auth0.com/userinfo',
     responseType: 'token id_token',
-    scope: 'openid'
+    scope: 'openid profile'
   }
 
 export default config;

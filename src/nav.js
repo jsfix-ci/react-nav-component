@@ -65,7 +65,7 @@ export default class Nav extends Component {
 	    })
 	    if(this.state.isShow){ 
 		    return (
-		        <nav onClick={this.clickNav.bind(this)}  className={"nav"}>
+		        <nav style={{backgroundColor: this.props.backgroundColour}} onClick={this.clickNav.bind(this)}  className={"nav"}>
 		            <header className={"nav__header"}>
 		                <h1>{this.props.title}</h1>
 		            </header>
@@ -82,7 +82,7 @@ export default class Nav extends Component {
 		    )
 	    }else{
 	        return (
-	            <img onClick={this.clickNav.bind(this)} src={menu} className={"nav__button"} alt='Menu Button'/>
+	            <img onClick={this.clickNav.bind(this)} src={menu} className={"nav__button"} alt='Menu Button' />
 	        )
 	    }
     }
@@ -93,7 +93,7 @@ Nav.defaultProps ={
     links:[
         {name:"about",location:"/about"}
     ],
-    thresholdX:800,
+    thresholdX:1000,
     Auth:{
         getProfile: ()=>{}
     }

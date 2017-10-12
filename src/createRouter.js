@@ -81,12 +81,19 @@ class CreateRouter extends Component {
                     <Nav
                         Auth={this.props.Auth}
                         links={this.state.navRoutes}
+                        title={this.props.title}
+                        backgroundColour={this.props.backgroundColour}
                     />
                     <Route component={Content} />
                 </div>
             </Router>
         )
     }
+}
+
+CreateRouter.defaultProps = {
+    title: "Test title",
+    backgroundColour: "black"
 }
 
 export {CreateRouter};

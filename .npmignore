@@ -1,0 +1,8 @@
+src
+webpack
+.travis.yml
+.gitignore
+.eslintrc
+.babelrc
+.coveralls.yml
+coverage

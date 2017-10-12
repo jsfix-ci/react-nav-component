@@ -21,6 +21,21 @@ const props = {
         {
             name: "route3",
             location: "/3",
+            element: Route2
+        },
+        {
+            name: "route4",
+            location: "/4",
+            element: Route2
+        },
+        {
+            name: "route5",
+            location: "/5",
+            element: Route2
+        },
+        {
+            name: "route6",
+            location: "/6",
             function: function (props){
                 return <Route3 input={"test input"} />
             }

@@ -1,6 +1,6 @@
 {
   "name": "@mortonprod/react-nav-component",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A react router with auth0 and share buttons built in",
   "main": "./dist/index.min.js",
   "scripts": {

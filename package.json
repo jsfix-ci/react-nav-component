@@ -32,7 +32,7 @@
   "homepage": "https://github.com/mortonprod/react-nav-component#readme",
   "dependencies": {
     "auth0-js": "^8.10.1",
-    "history": "^4.7.2",
+    "history": "^5.3.0",
     "react": "^16.0.0",
     "react-router-dom": "^4.1.2",
     "react-share": "^1.16.0"

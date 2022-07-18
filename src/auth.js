@@ -1,5 +1,5 @@
 import auth0 from 'auth0-js';
-import createHistory from 'history/createBrowserHistory';
+import { createBrowserHistory as createHistory } from 'history';
 
 let history = createHistory({
   forceRefresh: true
